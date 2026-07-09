@@ -1,9 +1,0 @@
----
-title: "My first website"
-author: "Stefano"
-format: html
----
-
-# Presentation
-
-Stefano's website
