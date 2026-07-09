@@ -1,0 +1,100 @@
+---
+title: "My first website"
+author: "Stefano"
+affiliation: "University of Trieste"
+format:
+  html:
+    toc: true
+    toc-location: right
+    grid:
+      sidebar-width: 200px
+      body-width: 900px
+      margin-width: 400px
+      gutter-width: 1.5rem
+    theme:
+      light: minty
+      dark: superhero
+number-sections: true
+self-contained: true # useful when sending html to someone because it will include all the resources in the html file
+lang: en
+bibliography: references.bib
+citation-location: margin
+---
+
+# Presentation
+
+Stefano's website with Quarto. This is a simple website created with Quarto, a scientific and technical publishing system built on Pandoc.
+
+## Sub presentation
+
+Sub section
+
+### Sub sub section
+
+Sub sub section
+
+#### Paragraph
+
+This is my paragraph. And this the link to the official Tour de France website: [Tour de France](https://www.letour.fr/en/).
+
+Below is an image of the Tour de France logo.\
+
+![Tour de France logo](https://upload.wikimedia.org/wikipedia/it/e/e7/Tour_de_France_logo.png?utm_source=it.wikipedia.org&utm_campaign=index&utm_content=original)\
+
+Now the same image but locally stored and with different size.\
+
+![Tour de France logo](images/Tour_de_France_logo.png){width="200px"}\
+
+Now a mathematical formula: $E = mc^2${#eqeinstein}
+
+So in @eqeinstein we can see the famous Einstein's formula.
+
+### List of articles to try out the bibliography call
+
+In the YAML we have to bibliography: file_of_references.bib. This kind of file can be obtained in Zotero by selecting the relavant bib entry and to export them in a .bib file by selecting the BibTex format. Then we can cite the articles in the text by using the @ symbol followed by the citation key. For example,
+
+@raftery_bayesian_1995 is the first article cited.
+Then we have the walking stuff article [@murgia_number_2026].
+The one from Galton [@galton_visualised_1880] is very old.
+
+### Add a grid
+
+Three double dots to open an environment (REMEMBER TO CLOSE IT WITH THREE DOUBLE DOTS) and then the name of the environment, in this case "grid". Then we can add some content inside the grid. The grid is a layout system that allows us to create responsive designs. We can use it to create a grid of items that will adjust their size and position based on the screen size. Max numbers of columns is 12. We can use the following classes to define the number of columns for each item: .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12. We can also use the following classes to define the number of columns for each item on different screen sizes: .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12. The same applies for md (medium), lg (large) and xl (extra large) screen sizes.
+
+::: {.grid}
+
+::: {.g-col-4}
+This is my first column
+:::
+
+::: {.g-col-4}
+This is my second column
+:::
+
+::: {.g-col-4}
+This is my third column
+:::
+
+:::
+
+## Column to the margin
+
+Now I want to move a column to the margin, so that it will displayed on the side.
+For example I want to add an equation in the margin.
+
+The equation is $E = mc^2$
+
+::: {.column-margin}
+
+$E = mc^2$
+
+:::
+
+We use reference-location in the YAML to specify where we want a citation to be displayed on the margin the moment it is displayed in the text. In this case we want them to be displayed in the margin so reference-location: margin. If we want to display the references in the body we can use reference-location: body. If we want to display the references in a separate page we can use reference-location: separate-page. Also citation-location is useful: to specify where we want a citation to be displayed on the margin the moment it is displayed in the text. In this case we want them to be displayed in the margin so citation-location: margin. If we want to display the citations in the body we can use citation-location: body. If we want to display the citations in a separate page we can use citation-location: separate-page.
+
+Example of citation in the text is @galton_visualised_1880. The citation will be displayed in the margin.
+
+
+# For further details
+
+For further details look at the [code chunk](code_chunks.html) file.
